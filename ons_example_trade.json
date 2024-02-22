@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/imogencartwright/imogencartwright.github.io/main/ons_example_trade.csv"
+  },
+  "mark": "bar",
+  "width": 250,
+  "height": 300,
+  "title": {
+    "text": "Trade in Services exports by type",
+    "subtitle": "QNA, ONS, Dec 2023",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "encoding": {
+    "x": {"field": "Year", "sort": "-y", "type": "ordinal", "title": null},
+    "y": {
+      "field": "Value",
+      "title": null,
+      "type": "quantitative"
+      
+    },
+    "color": {
+      "field": "Source",
+      "type": "nominal",
+      "legend": {"orient": "top-right"},
+      "scale": {
+        "domain": [
+          "EU",
+          "Non-EU"
+        ],
+        "scheme": "yellowgreenblue"
+      },
+      "title": "Exports to"
+    }
+  }
+}
