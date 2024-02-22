@@ -33,7 +33,11 @@
         ],
         "scheme": "yellowgreenblue"
       },
-      "title": "Exports to"
+      "title": "Exports to"},
+
+    "tooltip": [
+      {"field": "Value"},
+      {"field": "Source"}
+    ]
     }
   }
-}
