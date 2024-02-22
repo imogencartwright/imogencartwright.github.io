@@ -1,0 +1,21 @@
+ 
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text":"Total Public Service Productivity",
+    "subtitle": ["Author: Imogen Cartwright", "Source: Office For National Statistics"]},
+
+  "width": 400,
+  "height": 300,
+ 
+  "data": {"url": "https://raw.githubusercontent.com/imogencartwright/imogencartwright.github.io/main/total_psp.csv"},
+ 
+  "mark": "line",
+ 
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "title":"Year"},
+    "y": {"field": "Productivity", "type": "quantitative", "title":"index","scale":{"domain":[80,120]}},
+    "color": {"field": "Country Name", "type": "nominal"}
+  }
+}
